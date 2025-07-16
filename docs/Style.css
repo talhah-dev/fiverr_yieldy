@@ -40,9 +40,9 @@ input:user-invalid {
     background: url(/docs/assets/images/home-banner.png) center/cover no-repeat;
 }
 
-.banner {
+.security {
     background: linear-gradient(270deg, rgba(29, 41, 57, 0) -5.9%, #1D2939 99.57%),
-        url(/docs/assets/images/about.jpg) no-repeat center center;
+        url(/docs/assets/images/security.png) no-repeat center center;
     background-size: cover;
 }
 
@@ -60,5 +60,127 @@ input:user-invalid {
     .servicePath {
         clip-path: polygon(2.5rem 0, 100% 0%, 35.5rem 100%, 0% 100%);
 
+    }
+}
+
+.bot {
+    position: relative;
+    border: 2px solid #F72F56;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.bot::after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    right: -20px;
+    width: 0;
+    height: 0;
+    border-left: 20px solid #F72F56;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+}
+
+.user {
+    position: relative;
+    border: 2px solid #FF9F1D;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.user::after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: -20px;
+    width: 0;
+    height: 0;
+    border-right: 20px solid #FF9F1D;
+    border-bottom: 15px solid transparent;
+    border-top: 15px solid transparent;
+}
+
+.borderShadow {
+    box-shadow: 0px 4px 4px 0px #00000040;
+
+    backdrop-filter: blur(4px)
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.animate-scroll {
+    animation: scroll 40s linear infinite;
+}
+
+
+.clientSlider {
+    overflow: hidden;
+    position: relative;
+}
+
+.client-slide-track {
+    display: flex;
+    width: calc(250px * 14);
+    /* Adjust 250px to actual image width if needed */
+    animation: client 40s linear infinite;
+}
+
+.client {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8px;
+}
+
+
+@keyframes client {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+.clientSlider2 {
+    overflow: hidden;
+    position: relative;
+}
+
+.client-slide-track2 {
+    display: flex;
+    width: calc(250px * 14);
+    /* Adjust 250px to actual image width if needed */
+    animation: client2 40s linear infinite;
+}
+
+.client2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8px;
+}
+
+
+@keyframes client2 {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
     }
 }
