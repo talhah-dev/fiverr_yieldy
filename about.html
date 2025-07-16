@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yieldy</title>
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="/docs/assets/images/favicon.png" type="image/x-icon">
+
+    <!-- Styles & Scripts -->
+    <link rel="stylesheet" href="/docs/Style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.1/dist/lenis.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+</head>
+
+
+<body class="overflow-x-hidden">
+
+    <div id="global-loader"
+        class="hidden transition-opacity duration-300 opacity-0 fixed inset-0 bg-zinc-100 flex justify-center items-center z-50">
+        <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#f72f56]"></div>
+    </div>
+
+    <div id="bottomToTopScroll"></div>
+
+    <nav class="fixed top-0 left-0 w-full bg-[#F72F56] z-40">
+        <div class="md:max-w-[85%] mx-auto flex justify-between items-center w-full lg:p-5 p-3 lg:h-[105px] h-24">
+            <div class="flex w-full items-center justify-start xl:gap-32 gap-20">
+                <a data-aos="fade-right" href="/index.html" class="flex items-center justify-center lg:justify-start">
+                    <img src="/docs/assets/images/logo.png" class="lg:h-[85px] h-16" alt="logo">
+                </a>
+            </div>
+            <div class="lg:flex items-center w-full gap-10 hidden">
+                <ul id="navbarLinks" data-aos="fade-right"
+                    class="lg:flex w-full font-medium text-lg hidden items-center text-[#ffffff] gap-5">
+                    <li class="px-3"><a href="/index.html"
+                            class="hover:opacity-60 tracking-wide text-nowrap transition-all duration-500">HOME</a>
+                    </li>
+                    <li class="px-3"><a href="/solution.html"
+                            class="hover:opacity-60 tracking-wide text-nowrap transition-all duration-500">SOLUTION </a>
+                    </li>
+                    <li class="px-3"><a href="/case-study.html"
+                            class="hover:opacity-60 tracking-wide text-nowrap transition-all duration-500">CASE
+                            STUDY</a>
+                    </li>
+                    <li class="px-3"><a href="/trust-and-saftey.html"
+                            class="hover:opacity-60 tracking-wide text-nowrap transition-all duration-500">TRUST
+                            & SAFETY
+                        </a>
+                    </li>
+                    <li class="px-3"><a href="/blog.html"
+                            class="hover:opacity-60 tracking-wide text-nowrap transition-all duration-500">BLOG
+                        </a>
+                    </li>
+                    <li class="relative px-3 flex items-center justify-center"><a href="/about.html"
+                            class="hover:opacity-60 tracking-wide text-nowrap font-black transition-all duration-500">ABOUT
+                            US</a>
+                        <img src="/docs/assets/images/navLine.png" class="absolute top-8" alt="">
+                    </li>
+                    <img class="h-[30px]" src="/docs/assets/images/search.svg" alt="">
+                </ul>
+            </div>
+            <i data-aos="fade-left" id="mobileMenuBtn"
+                class="fa-solid text-white fa-bars lg:!hidden text-2xl cursor-pointer mr-2"></i>
+        </div>
+    </nav>
+
+    <div id="mobileMenu"
+        class="fixed left-0 top-0 bg-[#F72F56] w-0 overflow-hidden h-screen z-50 transition-all duration-500">
+        <div class="flex items-end justify-end p-5">
+            <i class="fa-solid mobileMenuCloseBtn fa-x z-50 text-white text-xl cursor-pointer"></i>
+        </div>
+        <div class="p-6">
+            <ul class="flex relative z-50 text-[#ffffff] flex-col gap-7">
+                <li class="px-3"><a href="/index.html"
+                        class="hover:opacity-60 tracking-wide text-nowrap transition-all  duration-500">HOME</a>
+                </li>
+                <li class="px-3"><a href="/solution.html"
+                        class="hover:opacity-60 tracking-wide text-nowrap transition-all  duration-500">SOLUTION</a>
+                </li>
+                <li class="px-3"><a href="/case-study.html"
+                        class="hover:opacity-60 tracking-wide text-nowrap transition-all duration-500">CASE
+                        STUDY</a>
+                </li>
+                <li class="px-3"><a href="/trust-and-saftey.html"
+                        class="hover:opacity-60 tracking-wide text-nowrap transition-all duration-500">TRUST
+                        & SAFETY
+                    </a>
+                </li>
+                <li class="px-3"><a href="/blog.html"
+                        class="hover:opacity-60 tracking-wide text-nowrap transition-all duration-500">BLOG
+                    </a>
+                </li>
+                <li class="px-3"><a href="/about.html"
+                        class="hover:opacity-60 tracking-wide text-nowrap transition-all font-black duration-500">ABOUT
+                        US </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="lg:h-24 h-20"></div>
+
+    <section class="md:max-w-7xl w-full mx-auto p-5 md:px-20 xl:px-5 md:mt-14 my-10">
+
+
+        <div class="flex items-center md:gap-16 gap-7 md:flex-row flex-col ">
+
+            <div class="md:max-w-[50%] w-full">
+                <h2 class="text-[#F72F56] font-medium md:text-[45px] text-3xl">ABOUT US </h2>
+                <div class="md:w-[329px] w-48 bg-[#F72F56] h-[2px] md:mt-5 mt-2"></div>
+                <p class="mt-8 text-[#464F64] text-2xl md:leading-[140%]">Founded in 2020, <span
+                        class="text-[#F72F56] font-bold">Yieldy</span> is reshaping digital client engagement for the
+                    wealth management
+                    industry. Our mission is to empower financial institutions such banks, insurance companies and
+                    wealth management firms with AI-driven tools that transform onboarding, boost conversion, and unlock
+                    personalized investment journeys. <br>
+                    Built on cutting-edge <span class="text-[#F72F56] font-bold">generative AI</span> and <span
+                        class="text-[#F72F56] font-bold">behavioral finance</span>, Yieldy delivers deep investor
+                    profiling,
+                    real-time insights, and hyper-personalized recommendations — all while ensuring security,
+                    scalability, and full compliance. <br>
+                    We believe the future of wealth management lies in truly understanding each client. That's why we
+                    help firms turn every interaction into a tailored, trust-building experience that drives long-term
+                    value.
+                </p>
+
+            </div>
+
+            <div class="md:max-w-[50%] w-full">
+                <img src="/docs/assets/images/about.png" class="w-full" alt="">
+            </div>
+
+        </div>
+
+        <h2 class="md:mt-24 mt-10 text-[#464F64] font-medium md:text-[40px] text-3xl text-center">Team</h2>
+
+        <div class="flex items-start md:gap-10 gap-7 md:flex-row flex-col md:mt-10 mt-6">
+
+            <div class="md:max-w-[15%] w-full flex items-center justify-center flex-col text-center">
+                <img src="/docs/assets/images/team1.png" class="w-full" alt="">
+                <h2 class="text-[#F72F56] font-black mt-1">Salim Benabbes </h2>
+            </div>
+
+            <div class="md:max-w-[85%] w-full">
+                <p class="text-xl text-[#050000] font-medium">Co-Founder, Chief Executive Officer
+                    <br><br>
+                    Salim Benabbes is an proficient financial professional with over 15 years of experience in global
+                    investment and private banking. Prior to co-founding Yieldy, he advised on more than €2 billion in
+                    assets under management (AuM), specializing in wealth management, portfolio structuring, and
+                    strategic advisory. He had also advised <br>
+                    He aslo built a strong track record in Mergers & Acquisitions, leading complex cross-border
+                    transactions and strategic growth initiatives for clients across Europe and in GCC region. His
+                    expertise in deal structuring and capital strategy gives him a unique lens on the evolving needs of
+                    investors and financial advisors alike. <br>
+                    At Yieldy, Salim drives the company's vision to merge financial expertise and engineering with
+                    generative AI, transforming how investors are profiled, guided, and served in the digital era.
+                    He is a Registered Investment Advisor, and holds degrees from HEC Paris and Paris Dauphine
+                    University.
+                </p>
+            </div>
+
+        </div>
+        <div class="flex items-start md:gap-10 gap-7 md:flex-row flex-col md:mt-20 mt-10 ">
+
+            <div class="md:max-w-[15%] w-full flex items-center justify-center flex-col text-center">
+                <img src="/docs/assets/images/team2.png" class="w-full" alt="">
+                <h2 class="text-[#F72F56] font-black mt-1">Said Bouabdallah </h2>
+            </div>
+
+            <div class="md:max-w-[85%] w-full">
+                <p class="text-xl text-[#050000] font-medium">Co-Founder,Chief Technology Officer
+                    <br><br>
+                    With over25 years of experience in financial technology architecture, Said Bouabdallah leads
+                    Yieldy's product development and infrastructure strategy. He previously served as Solution Head
+                    Architect at Leveris, a core banking platform, where he designed large-scale, cloud-native systems
+                    for financial institutions. <br>
+                    At Yieldy, Said is the backbone behind the platform's modular architecture and secure AI
+                    integration. Certified byAmazon Web Services (AWS), he specializes in building scalable, resilient,
+                    and GDPR-compliant solutions tailored to the financial industry. <br>
+                    Said is a graduate ofENSAM Parisand brings a unique blend of engineering precision and real-world
+                    fintech delivery to the leadership team.
+                </p>
+            </div>
+
+        </div>
+        <div class="flex items-start md:gap-10 gap-7 md:flex-row flex-col md:mt-20 mt-10 ">
+
+            <div class="md:max-w-[15%] w-full flex items-center justify-center flex-col text-center">
+                <img src="/docs/assets/images/team3.png" class="w-full" alt="">
+                <h2 class="text-[#F72F56] font-black mt-1">Arslane OS </h2>
+            </div>
+
+            <div class="md:max-w-[85%] w-full">
+                <p class="text-xl text-[#050000] font-medium">Co-Founder, Chief AI Officer
+                    <br> <br>
+                    Arslane OS is a Gen AI and machine learning expert with a passion for building real-world, scalable
+                    AI systems. He leads Yieldy's artificial intelligence strategy — from investor behavior modeling to
+                    hyper-personalized financial recommendations. <br>
+                    A full-stack developer by training, Arslane bridges backend, frontend, and AI layers to deliver
+                    seamless, intelligent user experiences. His expertise ranges from fine-tuning LLM to deploying
+                    secure AI solutions in production environments. <br>
+                    He holds an advanced computers science degree from CESI Paris and is committed to applying next-gen
+                    technology to transform how financial institutions understand and serve their clients.
+
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script src="https://unpkg.com/lenis@1.3.1/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="./docs/javascript/global.js"></script>
+    <script src="./docs/javascript/navbar.js"></script>
+
+</body>
+
+</html>
