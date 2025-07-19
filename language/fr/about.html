@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yieldy</title>
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="/docs/assets/images/favicon.png" type="image/x-icon">
+
+    <!-- Styles & Scripts -->
+    <link rel="stylesheet" href="/docs/Style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.1/dist/lenis.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+</head>
+
+
+<body class="overflow-x-hidden">
+
+    <div id="global-loader"
+        class="hidden transition-opacity duration-300 opacity-0 fixed inset-0 bg-zinc-100 flex justify-center items-center z-50">
+        <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#f72f56]"></div>
+    </div>
+
+    <div id="bottomToTopScroll"></div>
+
+    <nav class="fixed top-0 left-0 w-full bg-[#F72F56] z-40">
+        <div class="md:max-w-[85%] mx-auto flex justify-between items-center w-full lg:p-5 p-3 lg:h-[105px] h-24">
+            <div class="flex w-full items-center justify-start xl:gap-32 gap-20">
+                <a data-aos="fade-right" href="/language/fr/index.html"
+                    class="flex items-center justify-center lg:justify-start">
+                    <img src="/docs/assets/images/logo.png" class="lg:h-[85px] h-16" alt="logo">
+                </a>
+            </div>
+            <div class="lg:flex items-center w-full gap-5 hidden">
+                <ul id="navbarLinks" data-aos="fade-right"
+                    class="lg:flex w-full font-medium text-lg hidden items-center text-[#ffffff] gap-5">
+                    <li class="px-3"><a href="/language/fr/index.html"
+                            class="hover:opacity-60 tracking-wide text-nowrap transition-all duration-500">ACCUEIL</a>
+                    </li>
+                    <li class="px-3"><a href="/language/fr/solution.html"
+                            class="hover:opacity-60 tracking-wide text-nowrap transition-all duration-500">SOLUTION</a>
+                    </li>
+                    <li class="px-3"><a href="/language/fr/case-study.html"
+                            class="hover:opacity-60 tracking-wide text-nowrap transition-all duration-500">ÉTUDE DE CAS
+                        </a>
+                    </li>
+                    <li class="px-3"><a href="/language/fr/trust-and-saftey.html"
+                            class="hover:opacity-60 tracking-wide text-nowrap transition-all duration-500">CONFIANCE &
+                            SECURITÉ
+                        </a>
+                    </li>
+                    <li class="px-3"><a href="/language/fr/blog.html"
+                            class="hover:opacity-60 tracking-wide text-nowrap transition-all duration-500">BLOG
+                        </a>
+                    </li>
+                    <li class="relative px-3 flex items-center justify-center"><a href="/language/fr/about.html"
+                            class="hover:opacity-60 tracking-wide text-nowrap font-black transition-all duration-500">PROPOS</a>
+                        <img src="/docs/assets/images/navLine.png" class="absolute top-8" alt="">
+                    </li>
+                    <img class="h-[30px]" src="/docs/assets/images/search.svg" alt="">
+                    <li>
+                        <div class="flex items-center justify-center gap-2 relative">
+                            <div id="language" class="cursor-pointer flex items-center gap-1.5">
+                                <span class="font-medium uppercase">FR</span>
+                                <i class="fa-solid fa-angle-down"></i>
+                            </div>
+
+                            <div id="langDropdown"
+                                class="absolute fadeIn top-8 w-20 -left-2 bg-[#F72F56] border border-zinc-200/60 p-3 rounded-xl shadow-md hidden">
+                                <ul class="space-y-3">
+                                    <li class="cursor-pointer hover:opacity-60 transition-all duration-500"><a
+                                            href="/language/fr/index.html" class="block w-full">FR</a></li>
+                                    <li class="cursor-pointer hover:opacity-60 transition-all duration-500"><a
+                                            href="/index.html" class="block w-full">EN</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <i data-aos="fade-left" id="mobileMenuBtn"
+                class="fa-solid text-white fa-bars lg:!hidden text-2xl cursor-pointer mr-2"></i>
+        </div>
+    </nav>
+
+    <div id="mobileMenu"
+        class="fixed left-0 top-0 bg-[#F72F56] w-0 overflow-hidden h-screen z-50 transition-all duration-500">
+        <div class="flex items-end justify-end p-5">
+            <i class="fa-solid mobileMenuCloseBtn fa-x z-50 text-white text-xl cursor-pointer"></i>
+        </div>
+        <div class="p-6">
+            <ul class="flex relative z-50 text-[#ffffff] flex-col gap-7">
+                <li class="px-3"><a href="/language/fr/index.html"
+                        class="hover:opacity-60 tracking-wide text-nowrap transition-all  duration-500">ACCUEIL</a>
+                </li>
+                <li class="px-3"><a href="/language/fr/solution.html"
+                        class="hover:opacity-60 tracking-wide text-nowrap transition-all duration-500">SOLUTION</a>
+                </li>
+                <li class="px-3"><a href="/language/fr/case-study.html"
+                        class="hover:opacity-60 tracking-wide text-nowrap transition-all duration-500">ÉTUDE DE CAS </a>
+                </li>
+                <li class="px-3"><a href="/language/fr/trust-and-saftey.html"
+                        class="hover:opacity-60 tracking-wide text-nowrap transition-all duration-500">CONFIANCE &
+                        SECURITÉ
+                    </a>
+                </li>
+                <li class="px-3"><a href="/language/fr/blog.html"
+                        class="hover:opacity-60 tracking-wide text-nowrap transition-all duration-500">BLOG
+                    </a>
+                </li>
+                <li class="px-3"><a href="/language/fr/about.html"
+                        class="hover:opacity-60 tracking-wide text-nowrap font-black transition-all duration-500">À
+                        PROPOS</a>
+                </li>
+            </ul>
+            <ul
+                class="grid grid-cols-2 relative z-50 text-zinc-100 font-medium uppercase w-full text-center mt-5 gap-3">
+                <li><a href="/index.html"
+                        class="hover:text-opacity-80 overflow-hidden transition-all duration-500 border border-zinc-200 rounded-lg w-full block py-1">EN
+                    </a>
+                </li>
+                <li><a href="/language/fr/index.html"
+                        class="hover:text-opacity-80 overflow-hidden transition-all duration-500 border border-zinc-200 rounded-lg w-full block py-1">FR</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="lg:h-24 h-20"></div>
+
+    <section class="md:max-w-7xl w-full mx-auto p-5 md:px-20 xl:px-5 md:mt-14 my-10">
+
+
+        <div class="flex items-center md:gap-16 gap-7 md:flex-row flex-col ">
+
+            <div class="md:max-w-[50%] w-full">
+                <h2 class="text-[#F72F56] font-medium md:text-[45px] text-3xl" data-aos="fade-up">À PROPOS </h2>
+                <div class="md:w-[329px] w-48 bg-[#F72F56] h-[2px] md:mt-5 mt-2" data-aos="fade-up"></div>
+                <p class="mt-8 text-[#464F64] text-2xl md:leading-[140%]" data-aos="fade-up" data-aos-delay="100">
+                    Fondée en 2020, Yieldy réinvente l'engagement numérique des clients dans le secteur de la gestion de
+                    patrimoine. <br>
+                    Notre mission est de permettre aux institutions financières telles que les banques, les compagnies
+                    d'assurance et les sociétés de gestion de patrimoine de disposer d'outils pilotés par l'IA qui
+                    transforment l'onboarding, stimulent la conversion et débloquent des parcours d'investissement
+                    personnalisés. <br>
+                    Construit sur l'IA générative de pointe et la finance comportementale, Yieldy offre un profilage
+                    approfondi des investisseurs, des informations en temps réel et des recommandations
+                    hyper-personnalisées - tout en garantissant la sécurité, l'évolutivité et une conformité totale.
+                    <br>
+                    Nous pensons que l'avenir de la gestion de patrimoine réside dans une véritable compréhension de
+                    chaque client. C'est pourquoi nous aidons les entreprises à transformer chaque interaction en une
+                    expérience personnalisée et de confiance qui génère une valeur à long terme.
+                </p>
+
+            </div>
+
+            <div class="md:max-w-[50%] w-full">
+                <img src="/docs/assets/images/about.png" data-aos="zoom-in" class="w-full" alt="">
+            </div>
+
+        </div>
+
+        <h2 data-aos="fade-up" class="md:mt-24 mt-10 text-[#464F64] font-medium md:text-[40px] text-3xl text-center">
+            NOS FONDATEURS </h2>
+
+        <div class="flex items-start md:gap-10 gap-7 md:flex-row flex-col md:mt-10 mt-6">
+
+            <div class="md:max-w-[15%] w-full flex items-center justify-center flex-col text-center">
+                <img data-aos="zoom-in" src="/docs/assets/images/team1.jpg" class="w-full rounded-xl" alt="">
+                <h2 data-aos="fade-up" class="text-[#F72F56] font-black mt-1">Salim Benabbes </h2>
+            </div>
+
+            <div class="md:max-w-[85%] w-full">
+                <p data-aos="fade-up" class="text-xl text-[#050000] font-medium">Cofondateur, directeur général
+                    <br><br>
+                    Salim Benabbes est un professionnel de la finance chevronné qui possède plus de 15 ans d'expérience
+                    dans le domaine de l'investissement mondial et de la banque privée. Avant de cofonder Yieldy, il a
+                    conseillé plus de 2 milliards d'euros d'actifs sous gestion, se spécialisant dans la gestion de
+                    patrimoine, la structuration de portefeuilles et le conseil stratégique. Il s'est également forgé
+                    une solide expérience dans le domaine des fusions et acquisitions, en dirigeant des transactions
+                    transfrontalières complexes et des initiatives de croissance stratégique pour des clients à travers
+                    l'Europe et dans la région du Conseil de coopération du Golfe. Son expertise en matière de
+                    structuration d'opérations et de stratégie de capital lui confère une vision unique de l'évolution
+                    des besoins des investisseurs et des conseillers financiers.
+                    <br><br>
+                    Chez Yieldy, Salim conduit la vision de l'entreprise qui consiste à fusionner l'expertise et
+                    l'ingénierie financières avec l'IA générative, en transformant la façon dont les investisseurs sont
+                    profilés, guidés et servis à l'ère numérique. Il est conseiller en placement agréé et diplômé d'HEC
+                    Paris et de l'Université Paris Dauphine.
+                </p>
+            </div>
+
+        </div>
+        <div class="flex items-start md:gap-10 gap-7 md:flex-row flex-col md:mt-20 mt-10 ">
+
+            <div class="md:max-w-[15%] w-full flex items-center justify-center flex-col text-center">
+                <img data-aos="zoom-in" src="/docs/assets/images/team2.jpg" class="w-full rounded-xl" alt="">
+                <h2 data-aos="fade-up" class="text-[#F72F56] font-black mt-1">Said Bouabdallah </h2>
+            </div>
+
+            <div class="md:max-w-[85%] w-full">
+                <p data-aos="fade-up" class="text-xl text-[#050000] font-medium">Cofondateur, directeur technique
+                    <br><br>
+                    Doté de plus de 25 ans d'expérience dans l'architecture des technologies financières, Said
+                    Bouabdallah dirige le développement des produits et la stratégie d'infrastructure de Yieldy. Il a
+                    précédemment occupé le poste de Solution Head Architect chez Leveris, une plateforme bancaire de
+                    base, où il a conçu des systèmes cloud-native à grande échelle pour les institutions financières.
+                    Chez Yieldy, Said est l'épine dorsale de l'architecture modulaire de la plateforme et de
+                    l'intégration sécurisée de l'IA. Certifié par Amazon Web Services (AWS), il est spécialisé dans la
+                    construction de solutions évolutives, résilientes et conformes au GDPR, adaptées à l'industrie
+                    financière.
+                    <br>
+                    Said est diplômé de l'ENSAM Paris et apporte à l'équipe dirigeante un mélange unique de précision
+                    technique et d'application concrète de la fintech.
+                </p>
+            </div>
+
+        </div>
+        <div class="flex items-start md:gap-10 gap-7 md:flex-row flex-col md:mt-20 mt-10 ">
+
+            <div class="md:max-w-[15%] w-full flex items-center justify-center flex-col text-center">
+                <img data-aos="zoom-in" src="/docs/assets/images/team3.jpg" class="w-full rounded-xl" alt="">
+                <h2 data-aos="fade-up" class="text-[#F72F56] font-black mt-1">Arslane OS </h2>
+            </div>
+
+            <div class="md:max-w-[85%] w-full">
+                <p data-aos="fade-up" class="text-xl text-[#050000] font-medium">Cofondateur, responsable de l'IA
+                    <br><br>
+                    Arslane OS est un expert en intelligence artificielle et en apprentissage automatique qui se
+                    passionne pour la construction de systèmes d'intelligence artificielle évolutifs dans le monde réel.
+                    Il dirige la stratégie d'intelligence artificielle de Yieldy, de la modélisation du comportement des
+                    investisseurs aux recommandations financières hyper-personnalisées. <br>
+                    Développeur full-stack de formation, Arslane fait le lien entre les couches backend, frontend et IA
+                    pour offrir des expériences utilisateur transparentes et intelligentes. Son expertise va de la mise
+                    au point de LLM au déploiement de solutions d'IA sécurisées dans des environnements de production.
+                    <br>
+                    Il est titulaire d'un diplôme d'informatique avancé du CESI Paris et s'engage à appliquer la
+                    technologie de nouvelle génération pour transformer la façon dont les institutions financières
+                    comprennent et servent leurs clients.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+    <div id="footer"></div>
+
+    <script src="https://unpkg.com/lenis@1.3.1/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="/docs/javascript/global.js"></script>
+    <script src="/docs/javascript/navbar.js"></script>
+    <script src="/language/fr/javascript/footer.js"></script>
+
+
+</body>
+
+</html>

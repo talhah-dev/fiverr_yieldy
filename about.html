@@ -30,7 +30,7 @@
 
     <div id="bottomToTopScroll"></div>
 
-    <nav class="fixed top-0 left-0 w-full bg-[#F72F56] z-40">
+     <nav class="fixed top-0 left-0 w-full bg-[#F72F56] z-40">
         <div class="md:max-w-[85%] mx-auto flex justify-between items-center w-full lg:p-5 p-3 lg:h-[105px] h-24">
             <div class="flex w-full items-center justify-start xl:gap-32 gap-20">
                 <a data-aos="fade-right" href="/index.html" class="flex items-center justify-center lg:justify-start">
@@ -65,6 +65,24 @@
                         <img src="/docs/assets/images/navLine.png" class="absolute top-8" alt="">
                     </li>
                     <img class="h-[30px]" src="/docs/assets/images/search.svg" alt="">
+                    <li>
+                        <div class="flex items-center justify-center gap-2 relative">
+                            <div id="language" class="cursor-pointer flex items-center gap-1.5">
+                                <span class="font-medium uppercase">EN</span>
+                                <i class="fa-solid fa-angle-down"></i>
+                            </div>
+
+                            <div id="langDropdown"
+                                class="absolute fadeIn top-8 w-20 -left-2 bg-[#F72F56] border border-zinc-200/60 p-3 rounded-xl shadow-md hidden">
+                                <ul class="space-y-3">
+                                    <li class="cursor-pointer hover:opacity-60 transition-all duration-500"><a
+                                            href="/language/fr/index.html" class="block w-full">FR</a></li>
+                                    <li class="cursor-pointer hover:opacity-60 transition-all duration-500"><a
+                                            href="/index.html" class="block w-full">EN</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </div>
             <i data-aos="fade-left" id="mobileMenuBtn"
@@ -103,6 +121,16 @@
                         US </a>
                 </li>
             </ul>
+                        <ul
+                class="grid grid-cols-2 relative z-50 text-zinc-100 font-medium uppercase w-full text-center mt-5 gap-3">
+                <li><a href="/index.html"
+                        class="hover:text-opacity-80 overflow-hidden transition-all duration-500 border border-zinc-200 rounded-lg w-full block py-1">EN
+                    </a>
+                </li>
+                <li><a href="/language/fr/index.html"
+                        class="hover:text-opacity-80 overflow-hidden transition-all duration-500 border border-zinc-200 rounded-lg w-full block py-1">FR</a>
+                </li>
+            </ul>
         </div>
     </div>
     <div class="lg:h-24 h-20"></div>
@@ -113,10 +141,11 @@
         <div class="flex items-center md:gap-16 gap-7 md:flex-row flex-col ">
 
             <div class="md:max-w-[50%] w-full">
-                <h2 class="text-[#F72F56] font-medium md:text-[45px] text-3xl">ABOUT US </h2>
-                <div class="md:w-[329px] w-48 bg-[#F72F56] h-[2px] md:mt-5 mt-2"></div>
-                <p class="mt-8 text-[#464F64] text-2xl md:leading-[140%]">Founded in 2020, <span
-                        class="text-[#F72F56] font-bold">Yieldy</span> is reshaping digital client engagement for the
+                <h2 class="text-[#F72F56] font-medium md:text-[45px] text-3xl" data-aos="fade-up">ABOUT US </h2>
+                <div class="md:w-[329px] w-48 bg-[#F72F56] h-[2px] md:mt-5 mt-2" data-aos="fade-up"></div>
+                <p class="mt-8 text-[#464F64] text-2xl md:leading-[140%]" data-aos="fade-up" data-aos-delay="100">
+                    Founded in 2020, <span class="text-[#F72F56] font-bold">Yieldy</span> is reshaping digital client
+                    engagement for the
                     wealth management
                     industry. Our mission is to empower financial institutions such banks, insurance companies and
                     wealth management firms with AI-driven tools that transform onboarding, boost conversion, and unlock
@@ -134,22 +163,23 @@
             </div>
 
             <div class="md:max-w-[50%] w-full">
-                <img src="/docs/assets/images/about.png" class="w-full" alt="">
+                <img src="/docs/assets/images/about.png" data-aos="zoom-in" class="w-full" alt="">
             </div>
 
         </div>
 
-        <h2 class="md:mt-24 mt-10 text-[#464F64] font-medium md:text-[40px] text-3xl text-center">Team</h2>
+        <h2 data-aos="fade-up" class="md:mt-24 mt-10 text-[#464F64] font-medium md:text-[40px] text-3xl text-center">
+            Team</h2>
 
         <div class="flex items-start md:gap-10 gap-7 md:flex-row flex-col md:mt-10 mt-6">
 
             <div class="md:max-w-[15%] w-full flex items-center justify-center flex-col text-center">
-                <img src="/docs/assets/images/team1.png" class="w-full" alt="">
-                <h2 class="text-[#F72F56] font-black mt-1">Salim Benabbes </h2>
+                <img data-aos="zoom-in" src="/docs/assets/images/team1.jpg" class="w-full rounded-xl" alt="">
+                <h2 data-aos="fade-up" class="text-[#F72F56] font-black mt-1">Salim Benabbes </h2>
             </div>
 
             <div class="md:max-w-[85%] w-full">
-                <p class="text-xl text-[#050000] font-medium">Co-Founder, Chief Executive Officer
+                <p data-aos="fade-up" class="text-xl text-[#050000] font-medium">Co-Founder, Chief Executive Officer
                     <br><br>
                     Salim Benabbes is an proficient financial professional with over 15 years of experience in global
                     investment and private banking. Prior to co-founding Yieldy, he advised on more than €2 billion in
@@ -170,21 +200,22 @@
         <div class="flex items-start md:gap-10 gap-7 md:flex-row flex-col md:mt-20 mt-10 ">
 
             <div class="md:max-w-[15%] w-full flex items-center justify-center flex-col text-center">
-                <img src="/docs/assets/images/team2.png" class="w-full" alt="">
-                <h2 class="text-[#F72F56] font-black mt-1">Said Bouabdallah </h2>
+                <img data-aos="zoom-in" src="/docs/assets/images/team2.jpg" class="w-full rounded-xl" alt="">
+                <h2 data-aos="fade-up" class="text-[#F72F56] font-black mt-1">Said Bouabdallah </h2>
             </div>
 
             <div class="md:max-w-[85%] w-full">
-                <p class="text-xl text-[#050000] font-medium">Co-Founder,Chief Technology Officer
+                <p data-aos="fade-up" class="text-xl text-[#050000] font-medium">Co-Founder, Chief Technology Officer
                     <br><br>
-                    With over25 years of experience in financial technology architecture, Said Bouabdallah leads
+                    With over 25 years of experience in financial technology architecture, Said Bouabdallah leads
                     Yieldy's product development and infrastructure strategy. He previously served as Solution Head
                     Architect at Leveris, a core banking platform, where he designed large-scale, cloud-native systems
                     for financial institutions. <br>
                     At Yieldy, Said is the backbone behind the platform's modular architecture and secure AI
-                    integration. Certified byAmazon Web Services (AWS), he specializes in building scalable, resilient,
-                    and GDPR-compliant solutions tailored to the financial industry. <br>
-                    Said is a graduate ofENSAM Parisand brings a unique blend of engineering precision and real-world
+                    integration. Certified by Amazon Web Services (AWS), he specializes in building scalable, resilient,
+                    and GDPR-compliant solutions tailored to the financial industry.
+                    <br>
+                    Said is a graduate of ENSAM Paris and brings a unique blend of engineering precision and real-world
                     fintech delivery to the leadership team.
                 </p>
             </div>
@@ -193,12 +224,12 @@
         <div class="flex items-start md:gap-10 gap-7 md:flex-row flex-col md:mt-20 mt-10 ">
 
             <div class="md:max-w-[15%] w-full flex items-center justify-center flex-col text-center">
-                <img src="/docs/assets/images/team3.png" class="w-full" alt="">
-                <h2 class="text-[#F72F56] font-black mt-1">Arslane OS </h2>
+                <img data-aos="zoom-in" src="/docs/assets/images/team3.jpg" class="w-full rounded-xl" alt="">
+                <h2 data-aos="fade-up" class="text-[#F72F56] font-black mt-1">Arslane OS </h2>
             </div>
 
             <div class="md:max-w-[85%] w-full">
-                <p class="text-xl text-[#050000] font-medium">Co-Founder, Chief AI Officer
+                <p data-aos="fade-up" class="text-xl text-[#050000] font-medium">Co-Founder, Chief AI Officer
                     <br> <br>
                     Arslane OS is a Gen AI and machine learning expert with a passion for building real-world, scalable
                     AI systems. He leads Yieldy's artificial intelligence strategy — from investor behavior modeling to
@@ -208,19 +239,19 @@
                     secure AI solutions in production environments. <br>
                     He holds an advanced computers science degree from CESI Paris and is committed to applying next-gen
                     technology to transform how financial institutions understand and serve their clients.
-
                 </p>
             </div>
 
         </div>
 
     </section>
-
+    <div id="footer"></div>
 
     <script src="https://unpkg.com/lenis@1.3.1/dist/lenis.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script src="./docs/javascript/global.js"></script>
-    <script src="./docs/javascript/navbar.js"></script>
+    <script src="/docs/javascript/global.js"></script>
+    <script src="/docs/javascript/navbar.js"></script>
+    <script src="/docs/javascript/footer.js"></script>
 
 </body>
 

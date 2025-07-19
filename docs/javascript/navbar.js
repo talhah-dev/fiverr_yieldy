@@ -11,3 +11,21 @@ mobileMenuCloseBtns.forEach((btn) => {
         mobileMenu.style.width = "0";
     });
 });
+
+const languageToggle = document.getElementById('language');
+const dropdown = document.getElementById('langDropdown');
+
+languageToggle.addEventListener('click', (e) => {
+    e.stopPropagation(); // prevent event from bubbling to body
+    dropdown.classList.toggle('hidden');
+});
+
+// Hide dropdown if clicked outside
+document.body.addEventListener('click', () => {
+    dropdown.classList.add('hidden');
+});
+
+// Optional: Stop propagation if clicking inside dropdown
+dropdown.addEventListener('click', (e) => {
+    e.stopPropagation();
+});
