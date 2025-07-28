@@ -19,17 +19,17 @@ footer.innerHTML = `
                     <li><a href="#">Contacts</a></li>
                 </ul>
                 <ul class="flex items-center justify-center text-white text-xl gap-2 font-bold">
-                    <li class="rounded-full bg-black flex items-center justify-center w-10 h-10 "><a href="#"><i
+                    <li class="rounded-full bg-black flex items-center justify-center w-10 h-10 "><a href="https://www.linkedin.com/company/yieldy/"><i
+                                class="fa-brands fa-linkedin"></i></a></li>
+                    <li class="rounded-full bg-black flex items-center justify-center w-10 h-10 "><a href="https://www.instagram.com/yieldy.fr/"><i
                                 class="fa-brands fa-instagram"></i></a></li>
-                    <li class="rounded-full bg-black flex items-center justify-center w-10 h-10 "><a href="#"><i
+                    <li class="rounded-full bg-black flex items-center justify-center w-10 h-10 "><a href="https://www.facebook.com/people/Yieldy/61566048009295/#"><i
                                 class="fa-brands fa-facebook-f"></i></a></li>
-                    <li class="rounded-full bg-black flex items-center justify-center w-10 h-10 "><a href="#"><i
+                    <li class="rounded-full bg-black flex items-center justify-center w-10 h-10 "><a href="https://www.youtube.com/user/salimbenabbes"><i
                                 class="fa-brands fa-youtube"></i></a></li>
-                    <li class="rounded-full bg-black flex items-center justify-center w-10 h-10 "><a href="#"><i
+                    <li class="rounded-full bg-black flex items-center justify-center w-10 h-10 "><a href="https://x.com/Yieldy_officiel"><i
                                 class="fa-brands fa-twitter"></i></a></li>
-                    <li class="rounded-full bg-black flex items-center justify-center w-10 h-10 "><a href="#"><i
-                                class="fa-brands fa-telegram"></i></a></li>
-                    <li class="rounded-full bg-black flex items-center justify-center w-10 h-10 "><a href="#"><i
+                    <li class="rounded-full bg-black flex items-center justify-center w-10 h-10 "><a href="https://www.tiktok.com/@yieldy_fr"><i
                                 class="fa-brands fa-tiktok"></i></a></li>
                 </ul>
             </div>
